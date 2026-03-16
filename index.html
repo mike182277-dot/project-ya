@@ -1,0 +1,415 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Проект Я — иммерсивный интенсив</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            ink: '#111827',
+            soft: '#F7F5F2',
+            sand: '#EDE6DC',
+            accent: '#B7791F',
+            pine: '#1F3A33'
+          },
+          boxShadow: {
+            soft: '0 20px 60px rgba(17,24,39,0.08)'
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    html { scroll-behavior: smooth; }
+    body { font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; }
+    .grain::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background-image: radial-gradient(rgba(255,255,255,0.14) 0.8px, transparent 0.8px);
+      background-size: 18px 18px;
+      opacity: .25;
+      pointer-events: none;
+    }
+    .hero-bg {
+      background-image:
+        linear-gradient(90deg, rgba(15,23,42,.84) 0%, rgba(15,23,42,.72) 34%, rgba(15,23,42,.45) 58%, rgba(15,23,42,.48) 100%),
+        url('https://commons.wikimedia.org/wiki/Special:FilePath/Gelendzhik%20Bay.JPG');
+      background-size: cover;
+      background-position: center;
+    }
+    .gel-1 {
+      background-image: linear-gradient(rgba(17,24,39,.18), rgba(17,24,39,.18)), url('https://commons.wikimedia.org/wiki/Special:FilePath/Gelendzhik%20resort.%20Beach.%20The%20bay.%20Mountains.jpg');
+      background-size: cover;
+      background-position: center;
+    }
+    .gel-2 {
+      background-image: linear-gradient(rgba(17,24,39,.22), rgba(17,24,39,.22)), url('https://commons.wikimedia.org/wiki/Special:FilePath/MarkotkhGelendzhik14Jan2006.jpg');
+      background-size: cover;
+      background-position: center;
+    }
+    .speaker-photo {
+      width: 100%;
+      aspect-ratio: 1 / 1;
+      object-fit: cover;
+      object-position: center;
+      border-radius: 22px;
+      display: block;
+    }
+  </style>
+</head>
+<body class="bg-[#fcfbf8] text-ink antialiased">
+  <div class="relative overflow-hidden hero-bg text-white grain">
+    <div class="relative mx-auto max-w-7xl px-4 py-4 sm:px-6 sm:py-6 lg:px-8">
+      <div class="flex items-center justify-between">
+        <div>
+          <div class="text-sm uppercase tracking-[0.24em] text-white/70">Авторский интенсив</div>
+          <div class="mt-1 text-xl font-semibold">Проект Я</div>
+        </div>
+        <a href="#cta" class="hidden rounded-full border border-white/20 bg-white/10 px-5 py-2 text-sm font-medium backdrop-blur md:inline-block">Связаться с нами</a>
+      </div>
+
+      <div class="grid items-center gap-8 py-10 sm:gap-10 sm:py-14 lg:grid-cols-[1.15fr_0.85fr] lg:gap-14 lg:py-24">
+        <div>
+          <div class="inline-flex items-center rounded-full border border-white/15 bg-white/10 px-4 py-2 text-sm text-white/85 backdrop-blur">
+            4 дня • 5 участников • офлайн • Геленджик и его окрестности
+          </div>
+          <h1 class="mt-5 max-w-5xl text-4xl font-semibold leading-[1.02] sm:mt-6 sm:text-5xl md:text-6xl">
+            Ваш самый важный
+            <span class="text-[#F5D7A1]">проект жизни — это вы сами</span>.
+          </h1>
+          <p class="mt-5 max-w-3xl text-base leading-7 text-white/82 sm:text-lg sm:leading-8 md:text-xl">
+            Мир меняется быстрее, чем наши привычные опоры: бизнес-модели, семейные обстоятельства, работа, роли и даже профессиональные компетенции. Но если вы умеете видеть и развивать себя как главный проект, вы можете заново собрать свою жизнь и реализовать себя практически в любых условиях.
+          </p>
+          <p class="mt-4 max-w-3xl text-base leading-7 text-white/74 sm:text-lg sm:leading-8">
+            «Проект Я» — иммерсивный интенсив для предпринимателей, собственников и лидеров, которые хотят не просто пережить очередной этап изменений, а создать для себя систему с высоким уровнем адаптивности, внутренней опоры и ясным фокусом на главное.
+          </p>
+          <div class="mt-8 flex flex-col gap-4 sm:flex-row">
+            <a href="#cta" class="rounded-2xl bg-white px-6 py-4 text-center text-base font-semibold text-ink transition hover:opacity-95">Связаться с нами</a>
+            <a href="#program" class="rounded-2xl border border-white/20 px-6 py-4 text-center text-base font-medium text-white/90 transition hover:bg-white/10">Посмотреть, как устроена программа</a>
+          </div>
+          <div class="mt-8 grid gap-3 text-sm text-white/78 sm:grid-cols-3 sm:gap-4">
+            <div class="rounded-2xl border border-white/12 bg-white/8 p-4 backdrop-blur">Не терапия и не инфобиз. Структурная работа с собой как с системой.</div>
+            <div class="rounded-2xl border border-white/12 bg-white/8 p-4 backdrop-blur">Интеллект, тело и эмоции собираются в единый маршрут.</div>
+            <div class="rounded-2xl border border-white/12 bg-white/8 p-4 backdrop-blur">На выходе — не вдохновение на вечер, а метод, маршрут и опора.</div>
+          </div>
+        </div>
+
+        <div class="rounded-[28px] border border-white/10 bg-white/10 p-4 shadow-soft backdrop-blur-xl sm:rounded-[32px] sm:p-6">
+          <div class="rounded-[24px] bg-white p-5 text-ink sm:rounded-[28px] sm:p-6 md:p-8">
+            <div class="text-sm font-medium uppercase tracking-[0.22em] text-accent">Для кого</div>
+            <div class="mt-4 space-y-4 text-[15px] leading-7 text-slate-700">
+              <p><strong>Для людей 35–50+</strong>, у которых уже есть результат, статус и ответственность, но всё сложнее отвечать себе на вопрос: «А куда я на самом деле иду?»</p>
+              <p>Для тех, кто держит бизнес, команду, семью, много решений и обязательств — но чувствует расфокус, усталость от ролей и нехватку внутренней ясности.</p>
+              <p>Для тех, кто хочет не «успеть больше», а <strong>вернуть контроль, энергию и смысл</strong>.</p>
+            </div>
+            <div class="mt-6 grid grid-cols-2 gap-3 text-sm">
+              <div class="rounded-2xl bg-soft p-4"><div class="font-semibold">5 человек</div><div class="mt-1 text-slate-600">Малая группа с глубокой работой</div></div>
+              <div class="rounded-2xl bg-soft p-4"><div class="font-semibold">4 дня</div><div class="mt-1 text-slate-600">Полное погружение без шума</div></div>
+              <div class="rounded-2xl bg-soft p-4"><div class="font-semibold">Геленджик</div><div class="mt-1 text-slate-600">Море, горы, тишина и выездные локации</div></div>
+              <div class="rounded-2xl bg-soft p-4"><div class="font-semibold">ИИ-сопилот</div><div class="mt-1 text-slate-600">Продолжает работу после интенсива</div></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <section class="mx-auto max-w-7xl px-4 py-14 sm:px-6 sm:py-16 lg:px-8 lg:py-20">
+    <div class="grid gap-10 lg:grid-cols-[1.05fr_0.95fr] lg:items-center">
+      <div>
+        <div class="text-sm font-semibold uppercase tracking-[0.22em] text-accent">Смысл и концепция</div>
+        <h2 class="mt-4 text-3xl font-semibold leading-[1.08] sm:text-4xl md:text-5xl">Вы — единственный актив, который проходит через все изменения вашей жизни.</h2>
+        <p class="mt-6 text-lg leading-8 text-slate-700">Компании растут и перестраиваются. Рынки качает. Работа меняется. Семейный статус и окружение меняются. Компетенции устаревают и пересобираются. Внешние обстоятельства почти всегда подвижны.</p>
+        <p class="mt-4 text-lg leading-8 text-slate-700">Но если у человека есть внутренняя система, ясный вектор, понимание своих источников энергии и способность адаптироваться, он не теряет себя вместе с контекстом. Он собирает новый контекст под себя.</p>
+      </div>
+      <div class="rounded-[28px] bg-[#111827] p-6 text-white shadow-soft sm:rounded-[34px] sm:p-8 md:p-10">
+        <div class="text-sm font-semibold uppercase tracking-[0.2em] text-[#F5D7A1]">Ключевая идея программы</div>
+        <div class="mt-6 space-y-5 text-xl leading-9 text-white/88 md:text-2xl md:leading-10">
+          <p>Принять факт, что неопределённость будущего — новая норма.</p>
+          <p>Сосредоточиться не на контроле всего мира, а на построении себя как системы с высокой адаптивностью.</p>
+          <p>Собрать личный проект, который помогает жить, выбирать и реализовываться в любых условиях.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="mx-auto max-w-7xl px-4 py-14 sm:px-6 sm:py-16 lg:px-8 lg:py-20">
+    <div class="max-w-3xl">
+      <div class="text-sm font-semibold uppercase tracking-[0.22em] text-accent">Проблема</div>
+      <h2 class="mt-4 text-3xl font-semibold leading-[1.08] sm:text-4xl md:text-5xl">Снаружи всё может выглядеть успешно. Внутри — ощущение, что вы тащите слишком много и всё время живёте в чужих ролях.</h2>
+    </div>
+    <div class="mt-12 grid gap-6 md:grid-cols-2 xl:grid-cols-4">
+      <div class="rounded-[28px] bg-white p-6 shadow-soft">
+        <div class="text-lg font-semibold">Расфокус</div>
+        <p class="mt-3 text-slate-600">Слишком много проектов, направлений, обязательств и целей, которые больше не собираются в целостную картину.</p>
+      </div>
+      <div class="rounded-[28px] bg-white p-6 shadow-soft">
+        <div class="text-lg font-semibold">Энергетические утечки</div>
+        <p class="mt-3 text-slate-600">Вы продолжаете делать привычное, но не понимаете, что реально даёт энергию, а что выжигает её изнутри.</p>
+      </div>
+      <div class="rounded-[28px] bg-white p-6 shadow-soft">
+        <div class="text-lg font-semibold">Переизбыток ролей</div>
+        <p class="mt-3 text-slate-600">Предприниматель, партнёр, родитель, лидер, «опора для всех» — но где в этом всём сам человек?</p>
+      </div>
+      <div class="rounded-[28px] bg-white p-6 shadow-soft">
+        <div class="text-lg font-semibold">Планирование без опоры</div>
+        <p class="mt-3 text-slate-600">Даже сильные люди часто строят планы на год от тревоги, а не от ясного понимания своего реального вектора.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="bg-soft">
+    <div class="mx-auto grid max-w-7xl gap-8 px-4 py-14 sm:gap-10 sm:px-6 sm:py-16 lg:grid-cols-[0.95fr_1.05fr] lg:gap-12 lg:px-8 lg:py-20">
+      <div>
+        <div class="text-sm font-semibold uppercase tracking-[0.22em] text-accent">Решение</div>
+        <h2 class="mt-4 text-3xl font-semibold leading-[1.08] sm:text-4xl md:text-5xl">Ваш главный проект — это вы сами.</h2>
+        <p class="mt-6 text-lg leading-8 text-slate-700">Мы применяем к человеку проектный подход: разбираем его как систему с целью, ресурсами, процессами, ограничениями, точками роста и метриками движения. Но не на уровне «прокачайся ещё сильнее», а на уровне базовых настроек.</p>
+        <p class="mt-4 text-lg leading-8 text-slate-700">«Проект Я» работает не с социальной маской и не с внешним статусом. Мы идём глубже: к внутреннему балансу, реальным источникам энергии, взрослому лидерству и новой архитектуре года.</p>
+      </div>
+      <div class="grid gap-4">
+        <div class="rounded-[28px] bg-white p-6 shadow-soft">
+          <div class="text-sm font-semibold uppercase tracking-[0.18em] text-pine">1. Проектное мышление о себе</div>
+          <p class="mt-2 text-slate-700">Вы перестаёте смотреть на себя как на набор ролей и собираете личный проект: суть, цель года, ключевые направления, риски, возможности и маршрут.</p>
+        </div>
+        <div class="rounded-[28px] bg-white p-6 shadow-soft">
+          <div class="text-sm font-semibold uppercase tracking-[0.18em] text-pine">2. Энергетический аудит</div>
+          <p class="mt-2 text-slate-700">Находите, что наполняет, что компенсирует внутренние дефициты и где вы теряете ресурс. Это меняет не только план, но и качество решений.</p>
+        </div>
+        <div class="rounded-[28px] bg-white p-6 shadow-soft">
+          <div class="text-sm font-semibold uppercase tracking-[0.18em] text-pine">3. Лидерство через опыт</div>
+          <p class="mt-2 text-slate-700">Через физические активности, ротацию ролей и групповую динамику вы видите себя как лидера и как ведомого — не в теории, а в реальном проживании.</p>
+        </div>
+        <div class="rounded-[28px] bg-white p-6 shadow-soft">
+          <div class="text-sm font-semibold uppercase tracking-[0.18em] text-pine">4. ИИ-сопровождение после</div>
+          <p class="mt-2 text-slate-700">На выходе вы получаете не только документ и инсайты, но и персонального ИИ-сопилота, который знает ваш контекст, цели и стиль мышления.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="mx-auto max-w-7xl px-4 py-14 sm:px-6 sm:py-16 lg:px-8 lg:py-20">
+    <div class="max-w-5xl">
+      <div class="text-sm font-semibold uppercase tracking-[0.22em] text-accent">Почему это сработает</div>
+      <h2 class="mt-4 max-w-4xl text-3xl font-semibold leading-[1.05] sm:text-4xl md:text-5xl">Не очередной ретрит. Не мастермайнд. Не мотивационный выезд.</h2>
+    </div>
+    <div class="mt-10 grid gap-4 sm:mt-12 sm:gap-6 lg:grid-cols-3">
+      <div class="rounded-[28px] border border-slate-200 bg-white p-7">
+        <div class="text-xl font-semibold">Глубина без эзотерического тумана</div>
+        <p class="mt-4 leading-7 text-slate-600">В основе — ясная логика, метод, проектное мышление, энергоаудит, групповая динамика и личная рефлексия. Без «магических кнопок» и готовых ответов за вас.</p>
+      </div>
+      <div class="rounded-[28px] border border-slate-200 bg-white p-7">
+        <div class="text-xl font-semibold">Малый состав и сильная среда</div>
+        <p class="mt-4 leading-7 text-slate-600">Всего 5 участников, цифровая изоляция, кодовые имена, отсутствие привычных статусов и запрет на советы. Это создаёт редкую глубину присутствия и честности.</p>
+      </div>
+      <div class="rounded-[28px] border border-slate-200 bg-white p-7">
+        <div class="text-xl font-semibold">Результат остаётся после 4 дней</div>
+        <p class="mt-4 leading-7 text-slate-600">На выходе вы уезжаете не только с проживанием и красивыми словами, а с собранным «Проектом Я», планом первых 30 дней и ИИ-инструментом для продолжения пути.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="program" class="bg-[#fffdf9]">
+    <div class="mx-auto max-w-7xl px-4 py-14 sm:px-6 sm:py-16 lg:px-8 lg:py-20">
+      <div class="max-w-3xl">
+        <div class="text-sm font-semibold uppercase tracking-[0.22em] text-accent">Как это устроено</div>
+        <h2 class="mt-4 text-3xl font-semibold leading-[1.08] sm:text-4xl md:text-5xl">4 дня, в которых всё складывается только к финалу.</h2>
+        <p class="mt-6 text-lg leading-8 text-slate-700">Программа устроена как управляемое погружение: от анализа себя как проекта — к энергии, далее к лидерству в проживании и в конце к сборке новой личной архитектуры.</p>
+      </div>
+      <div class="mt-10 grid gap-4 sm:mt-12 sm:gap-5 lg:grid-cols-4">
+        <div class="rounded-[30px] bg-white p-6 shadow-soft">
+          <div class="text-sm font-semibold uppercase tracking-[0.18em] text-accent">День 1</div>
+          <div class="mt-3 text-2xl font-semibold">Проект</div>
+          <p class="mt-4 text-slate-600">Суть проекта, цель года, SWOT, ресурсы, процессы и черновик дорожной карты. Вы впервые смотрите на себя как на систему.</p>
+        </div>
+        <div class="rounded-[30px] bg-white p-6 shadow-soft">
+          <div class="text-sm font-semibold uppercase tracking-[0.18em] text-accent">День 2</div>
+          <div class="mt-3 text-2xl font-semibold">Энергия</div>
+          <p class="mt-4 text-slate-600">Инвентаризация притоков и утечек, работа с компенсациями, понятие разумной достаточности и корректировка маршрута под реальный ресурс.</p>
+        </div>
+        <div class="rounded-[30px] bg-white p-6 shadow-soft">
+          <div class="text-sm font-semibold uppercase tracking-[0.18em] text-accent">День 3</div>
+          <div class="mt-3 text-2xl font-semibold">Лидерство</div>
+          <p class="mt-4 text-slate-600">Опытный день: ротация ролей, командные задачи, физические активности, наблюдение за собой как лидером и как человеком в подчинении.</p>
+        </div>
+        <div class="rounded-[30px] bg-white p-6 shadow-soft">
+          <div class="text-sm font-semibold uppercase tracking-[0.18em] text-accent">День 4</div>
+          <div class="mt-3 text-2xl font-semibold">Интеграция</div>
+          <p class="mt-4 text-slate-600">Сборка финального документа «Проект Я», первые 30 дней, настройка сопровождения и большой reveal персонального ИИ-сопилота.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="mx-auto max-w-7xl px-4 py-14 sm:px-6 sm:py-16 lg:px-8 lg:py-20">
+    <div class="grid gap-8 lg:grid-cols-[0.95fr_1.05fr] lg:items-center">
+      <div>
+        <div class="text-sm font-semibold uppercase tracking-[0.22em] text-accent">Локация</div>
+        <h2 class="mt-4 text-3xl font-semibold leading-[1.08] sm:text-4xl md:text-5xl">Геленджик и его окрестности — не фон, а часть метода.</h2>
+        <p class="mt-6 text-lg leading-8 text-slate-700">Море, рельеф, смена пространства, выездные точки, дистанция от обычной городской скорости — всё это помогает выйти из автоматических сценариев и настроиться на более честную работу с собой.</p>
+        <p class="mt-4 text-lg leading-8 text-slate-700">Здесь важны не только комфорт и эстетика. Важна среда, в которой человек может остановиться, увидеть себя шире привычного контекста и буквально сменить внутренний горизонт.</p>
+      </div>
+      <div class="grid gap-4 sm:gap-5 md:grid-cols-2">
+        <div class="gel-1 min-h-[260px] rounded-[24px] p-4 text-white shadow-soft flex items-end overflow-hidden sm:min-h-[320px] sm:rounded-[30px] sm:p-6">
+          <div>
+            <div class="text-sm uppercase tracking-[0.18em] text-white/75">Геленджикская бухта</div>
+            <div class="mt-2 max-w-[16rem] text-lg font-semibold leading-tight sm:max-w-xs sm:text-xl md:text-2xl">Пространство, в котором проще замедлиться и увидеть целое</div>
+          </div>
+        </div>
+        <div class="gel-2 min-h-[260px] rounded-[24px] p-4 text-white shadow-soft flex items-end overflow-hidden sm:min-h-[320px] sm:rounded-[30px] sm:p-6">
+          <div>
+            <div class="text-sm uppercase tracking-[0.18em] text-white/75">Маркотхский хребет и окрестности</div>
+            <div class="mt-2 max-w-[16rem] text-lg font-semibold leading-tight sm:max-w-xs sm:text-xl md:text-2xl">Высота, движение и другой масштаб восприятия</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="mx-auto max-w-7xl px-4 py-14 sm:px-6 sm:py-16 lg:px-8 lg:py-20">
+    <div class="grid gap-6 lg:grid-cols-[1fr_1fr] lg:gap-8">
+      <div class="rounded-[28px] bg-[#111827] p-6 text-white sm:rounded-[34px] sm:p-8 md:p-10">
+        <div class="text-sm font-semibold uppercase tracking-[0.2em] text-[#F5D7A1]">Что получите на выходе</div>
+        <ul class="mt-6 space-y-4 text-base leading-7 text-white/82">
+          <li>Финальную карту «Проект Я»: суть, цель, ключевые направления, риски, ресурсы, метрики и маршрут.</li>
+          <li>Осознанную картину своего энергобаланса: что усиливать, что отсекать, что перестать компенсировать.</li>
+          <li>Понимание своих лидерских паттернов и точек роста во взаимодействии с людьми.</li>
+          <li>Первые 30 дней действий, чтобы трансформация не осталась «хорошим опытом».</li>
+          <li>Персонального ИИ-сопилота, который помогает двигаться дальше.</li>
+        </ul>
+      </div>
+      <div class="rounded-[28px] bg-sand p-6 sm:rounded-[34px] sm:p-8 md:p-10">
+        <div class="text-sm font-semibold uppercase tracking-[0.2em] text-pine">Что важно понимать заранее</div>
+        <ul class="mt-6 space-y-4 text-base leading-7 text-slate-700">
+          <li>Это не формат для «случайного любопытства». Нужна готовность честно работать с собой.</li>
+          <li>Это не отпуск и не развлекательный wellness-тур, хотя среда и эстетика здесь важны.</li>
+          <li>Мы не обещаем волшебное исцеление за 4 дня. Мы создаём сильный сдвиг, метод и инструменты для продолжения.</li>
+          <li>Группа малая, состав отбирается вручную. Критичны доверие, зрелость и готовность к правилам среды.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="bg-soft">
+    <div class="mx-auto max-w-7xl px-4 py-14 sm:px-6 sm:py-16 lg:px-8 lg:py-20">
+      <div class="max-w-5xl">
+        <div class="text-sm font-semibold uppercase tracking-[0.22em] text-accent">Кто ведёт</div>
+        <h2 class="mt-4 max-w-4xl text-3xl font-semibold leading-[1.05] sm:text-4xl md:text-5xl">Два ведущих — две оптики, собранные в одну сильную работу.</h2>
+      </div>
+      <div class="mt-10 grid gap-6 lg:grid-cols-2">
+        <div class="rounded-[24px] bg-white p-6 shadow-soft sm:rounded-[30px] sm:p-8">
+          <div class="grid gap-5 sm:gap-6 md:grid-cols-[140px_1fr] md:items-start">
+            <div>
+              <img src="assets/img/mikhail-kachalkin.png" alt="Михаил Качалкин" class="speaker-photo" />
+            </div>
+            <div>
+              <div class="text-sm font-semibold uppercase tracking-[0.18em] text-accent">Михаил Качалкин</div>
+              <div class="mt-3 text-2xl font-semibold">Рациональный контур, структура и стратегическая сборка</div>
+              <p class="mt-4 leading-7 text-slate-700">Предприниматель, методолог, фасилитатор и модератор. Помогает увидеть себя как систему: выделить суть проекта, собрать цель года, структуру решений, точки роста, риски и маршрут движения.</p>
+              <p class="mt-4 leading-7 text-slate-600">В программе отвечает за стратегическую рамку, проектную логику, сборку личной карты и перевод внутренних инсайтов в понятные действия.</p>
+            </div>
+          </div>
+        </div>
+        <div class="rounded-[24px] bg-white p-6 shadow-soft sm:rounded-[30px] sm:p-8">
+          <div class="grid gap-5 sm:gap-6 md:grid-cols-[140px_1fr] md:items-start">
+            <div>
+              <img src="assets/img/olesya-slavyanskaya.png" alt="Олеся Славянская" class="speaker-photo" />
+            </div>
+            <div>
+              <div class="text-sm font-semibold uppercase tracking-[0.18em] text-accent">Олеся Славянская</div>
+              <div class="mt-3 text-2xl font-semibold">Эмоциональный контур, телесные практики и работа с внутренним состоянием</div>
+              <p class="mt-4 leading-7 text-slate-700">Эксперт по энергоменеджменту, эмоциональному интеллекту и телесным практикам. Помогает участнику увидеть свои реальные источники энергии, внутренние дефициты и способы вернуть себе живость, устойчивость и контакт с собой.</p>
+              <p class="mt-4 leading-7 text-slate-600">В программе отвечает за эмоциональную глубину, работу с телом, состоянием, проживанием и мягкую, но сильную внутреннюю перестройку.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="bg-[#fffdf9]">
+    <div class="mx-auto max-w-7xl px-4 py-14 sm:px-6 sm:py-16 lg:px-8 lg:py-20">
+      <div class="max-w-5xl">
+        <div class="text-sm font-semibold uppercase tracking-[0.22em] text-accent">Почему этому можно доверять</div>
+        <h2 class="mt-4 max-w-4xl text-3xl font-semibold leading-[1.05] sm:text-4xl md:text-5xl">Сейчас это пилотный формат. И в этом его преимущество.</h2>
+      </div>
+      <div class="mt-10 grid gap-6 lg:grid-cols-3">
+        <div class="rounded-[28px] bg-white p-7 shadow-soft">
+          <div class="text-lg font-semibold">Авторский дуэт</div>
+          <p class="mt-3 text-slate-600">Программа строится вокруг сильного сочетания стратегического мышления, фасилитации, работы с личной трансформацией и групповой динамикой.</p>
+          <p class="mt-4 text-sm text-slate-500">Два ведущих с разными оптиками помогают соединить структуру, состояние, рефлексию и действие в одну цельную работу.</p>
+        </div>
+        <div class="rounded-[28px] bg-white p-7 shadow-soft">
+          <div class="text-lg font-semibold">Первая группа вручную</div>
+          <p class="mt-3 text-slate-600">Пилот набирается не в широкую воронку, а через личный отбор. Это позволяет собрать зрелую группу и донастроить метод на реальных участниках.</p>
+          <p class="mt-4 text-sm text-slate-500">Участие начинается не с покупки, а с предварительного контакта и короткого интервью.</p>
+        </div>
+        <div class="rounded-[28px] bg-white p-7 shadow-soft">
+          <div class="text-lg font-semibold">Контент для упаковки</div>
+          <p class="mt-3 text-slate-600">После пилота здесь появятся реальные отзывы, фото, видеофрагменты среды, кейсы трансформации и формат follow-up сопровождения.</p>
+          <p class="mt-4 text-sm text-slate-500">Сейчас страница собирает первый качественный поток и готовит основу для proof после запуска.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="mx-auto max-w-5xl px-4 py-14 sm:px-6 sm:py-16 lg:px-8 lg:py-20">
+    <div class="text-center">
+      <div class="text-sm font-semibold uppercase tracking-[0.22em] text-accent">FAQ</div>
+      <h2 class="mt-4 text-3xl font-semibold leading-[1.08] sm:text-4xl md:text-5xl">Частые вопросы</h2>
+    </div>
+    <div class="mt-12 space-y-4">
+      <details class="group rounded-[24px] bg-white p-6 shadow-soft" open>
+        <summary class="cursor-pointer list-none text-lg font-semibold">Это коучинг, ретрит или терапия?</summary>
+        <p class="mt-4 leading-7 text-slate-600">Скорее это авторский интенсив на стыке стратегической фасилитации, групповой трансформационной работы и иммерсивного опыта. Это не терапия в клиническом смысле и не лёгкий ретрит «про расслабиться».</p>
+      </details>
+      <details class="group rounded-[24px] bg-white p-6 shadow-soft">
+        <summary class="cursor-pointer list-none text-lg font-semibold">Почему выбрана именно локация в Геленджике?</summary>
+        <p class="mt-4 leading-7 text-slate-600">Потому что для этой программы важна не только комфортная среда, но и контраст с повседневной жизнью. Море, рельеф, воздух, смена пространства и выездные точки помогают человеку выйти из автоматических сценариев и увидеть себя шире.</p>
+      </details>
+      <details class="group rounded-[24px] bg-white p-6 shadow-soft">
+        <summary class="cursor-pointer list-none text-lg font-semibold">Что значит «ИИ-сопилот»?</summary>
+        <p class="mt-4 leading-7 text-slate-600">Внутри программы формируется цифровой помощник, который знает ваш контекст, цели и стиль мышления. Он нужен, чтобы сопровождать вас после интенсива: возвращать к вектору, помогать в рефлексии и удерживать движение.</p>
+      </details>
+      <details class="group rounded-[24px] bg-white p-6 shadow-soft">
+        <summary class="cursor-pointer list-none text-lg font-semibold">Подойдёт ли программа, если у меня сейчас нет острого кризиса?</summary>
+        <p class="mt-4 leading-7 text-slate-600">Да. Этот формат особенно ценен не в остром разрушении, а в точке зрелости, когда внешне всё «нормально», но вы хотите перейти на более осознанный уровень управления собой и своей жизнью.</p>
+      </details>
+      <details class="group rounded-[24px] bg-white p-6 shadow-soft">
+        <summary class="cursor-pointer list-none text-lg font-semibold">Почему всего 5 участников?</summary>
+        <p class="mt-4 leading-7 text-slate-600">Потому что глубина важнее масштаба. Такой состав позволяет удержать плотность внимания, увидеть каждого и создать сильную среду, в которой группа реально работает как катализатор, а не как шум.</p>
+      </details>
+    </div>
+  </section>
+
+  <section id="cta" class="mx-auto max-w-7xl px-4 pb-16 sm:px-6 sm:pb-20 lg:px-8 lg:pb-24">
+    <div class="rounded-[28px] bg-gradient-to-r from-[#111827] to-[#1f3A33] px-5 py-6 text-white shadow-soft sm:rounded-[36px] sm:px-8 sm:py-10 md:px-12 md:py-14">
+      <div class="grid gap-6 sm:gap-8 lg:grid-cols-[1.1fr_0.9fr] lg:items-end lg:gap-10">
+        <div>
+          <h2 class="mt-4 text-3xl font-semibold leading-[1.08] sm:text-4xl md:text-5xl">Свяжитесь с нами, чтобы обсудить участие в «Проекте Я»</h2>
+          <p class="mt-6 max-w-2xl text-lg leading-8 text-white/80">Мы общаемся с каждым участником лично. Вы можете написать в Telegram или сразу отправить письмо на почту — выберите формат, который вам удобнее.</p>
+        </div>
+        <div class="rounded-[22px] bg-white p-5 text-ink sm:rounded-[28px] sm:p-6 md:p-8">
+          <div class="text-lg font-semibold">Выберите удобный способ связи</div>
+          <div class="mt-4 grid gap-3 sm:grid-cols-2">
+            <a href="https://t.me/TopSlavyanskaya" target="_blank" rel="noopener noreferrer" class="rounded-2xl bg-ink px-5 py-4 text-center font-semibold text-white">Написать в Telegram</a>
+            <a href="mailto:mike182277@gmail.com?subject=%D0%9F%D1%80%D0%BE%D0%B5%D0%BA%D1%82%20%D0%AF%20%E2%80%94%20%D0%B7%D0%B0%D0%BF%D1%80%D0%BE%D1%81%20%D0%BD%D0%B0%20%D1%81%D0%BE%D0%B7%D0%B2%D0%BE%D0%BD" class="rounded-2xl border border-slate-300 px-5 py-4 text-center font-semibold text-slate-800">Написать на почту</a>
+          </div>
+          <p class="mt-4 text-sm leading-6 text-slate-500">Telegram — для быстрого контакта. Почта — если удобнее сразу описать свой контекст и запрос в свободной форме.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="border-t border-slate-200 bg-white">
+    <div class="mx-auto flex max-w-7xl flex-col gap-3 px-4 py-6 text-sm text-slate-500 sm:px-6 sm:gap-4 sm:py-8 lg:flex-row lg:items-center lg:justify-between lg:px-8">
+      <div>Проект Я — авторский прототип landing page</div>
+      <div>Текущий статус: концепт + пилотная упаковка + визуалы локации + блок ведущих</div>
+    </div>
+  </footer>
+</body>
+</html>
